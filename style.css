@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none !important;
+    object-fit: cover !important;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.nav-link{
+    position: relative;
+    display: inline-block;
+    color: #fff !important;
+    transition: 2s;
+}
+  
+.nav-link:hover{
+    color: #000000 !important;
+}
+  
+.nav-link::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale 0.25s;
+}
+  
+.nav-link:hover::before{
+    transform-origin: left;
+    scale: 1;
+}
+
+nav{
+    height: 60px;
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(100px);
+    top: 0;
+    z-index: 99;
+}
+   
+.navbar-brand{
+    color: rgb(197, 197, 197) !important;
+}
+
+.navvy{
+    position: relative !important;
+    left: 40%;
+}
+
+#home{
+    /* background: url('asset/hero-image.gif'); */
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    /* background-repeat: no-repeat; */
+}
+
+#home .text, .image, .stay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text .display-1{
+    font-weight: 700;
+    font-size: 86px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #090F25;
+    /* color: rgb(33,228,132); */
+}
+
+.text span, .sub{
+    color: rgb(12, 169, 91);
+}
+
+#home .ctaGrp .btn{
+    border: 1px dashed rgb(33, 228, 132);
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 40px;
+}
+
+#startBtn{
+    background: rgb(33, 228, 132);
+    color: #fff;
+}
+
+#viewBtn{
+    color: rgb(33, 228, 132);
+    position: relative;
+    overflow: hidden;
+}
+
+#viewBtn:hover{
+    color: #fff ;
+}
+
+#viewBtn::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: rgb(33, 228, 132);
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    transition: width 0.25s;
+}
+
+#viewBtn:hover::before {
+    width: 100%;
+    color: #fff;
+  }
+  
+
+.fade-in-out {
+    animation: fadeInOut 10s infinite;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+}
+
+.stay{
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    background: rgb(33, 228, 132);
+    color: #fff;
+    /* padding: 6px; */
+    border-radius: 50%;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+}
+
+#about h3, #portfolio h2, .section-title{
+    color: rgb(33, 228, 132) !important;
+}
+
+#about{
+    line-height: 32px;
+}
+
+#about img{
+    border: 10px dotted rgb(33, 228, 132);
+    height: 460px;
+}
+.card{
+    border: 4px double rgba(33, 228, 131, 0.4) !important;
+}
+
+.card img{
+    width: 100%;
+    height: 390px;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 20px rgba(0, 248, 87, 0.2);
+}
+
+.section-text span, .card h5{
+    color: rgb(33, 228, 132);
+}
+
+.card .btn{
+    background: rgb(33, 228, 132) !important;
+    border: 0;
+}
+
+.card:hover img{
+    scale: 1.02;
+}
+
+.card img{
+    transition: .3s ease;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .navbar-toggler{
+        position: absolute !important;
+        left: 10px;
+        bottom: 10px;
+        background: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .nav-item{
+        width: 100% !important;
+        text-align: start !important;
+        margin-top: 50px !important;
+    }
+    
+    .navbar-brand{
+        position: absolute !important;
+        left: 20%;
+        bottom: 10px;
+    }
+
+    .text .display-1{
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+    }
+
+    body{
+        background: #090F25 !important;
+    }
+
+    .sub{
+        font-size: 14.8px !important;
+        color: #ffffff81 ;
+    }
+
+    #home .ctaGrp .btn{
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 40px;
+    }
+
+    .ctaGrp{
+        justify-content: center;
+        align-items: center;
+        padding-top: 24px !important;
+    }
+
+    #startBtn{
+        color: #000000 ;
+    }
+
+    nav{
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .reverse{
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #home{
+        height: 100vh;
+    }
+
+    #about, nav, #portfolio, #services, footer, #contact{
+        display: none;
+    }
+
+    #about, form, footer h3, footer .bi{
+        color: #fff !important;
+    }
+
+    footer span{
+        width: 100% !important;
+        justify-content: space-around !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
+    .section-title, .card-text{
+        color: #fff !important;
+    }
+
+    .collapse{
+        position: relative !important;
+        margin-top: 15% !important;
+        /* display: flex !important; */
+        justify-content: center !important;
+        align-items: center !important;
+        background: #090F25;
+        height: 100vh;
+    }
+
+    .card{
+        background: rgba(33, 228, 131, 0.05) !important;
+    }
+
+}
